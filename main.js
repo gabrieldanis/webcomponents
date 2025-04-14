@@ -30,3 +30,8 @@ customElements.define(
         }
     }
 );
+
+// customElements.define("my-component", MyComponent);
+// export { MyComponent };
+
+// import "./MyComponent";
