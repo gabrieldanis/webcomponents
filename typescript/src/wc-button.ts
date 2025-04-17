@@ -1,10 +1,7 @@
 class WebcomponentButton extends HTMLButtonElement {
   constructor() {
     super();
-    const slot = this.getAttribute("slot");
-    if (slot) {
-      this.innerText = slot;
-    }
+    this.innerText = this.getAttribute("slot") ?? "";
     document.addEventListener("click", this);
   }
 
