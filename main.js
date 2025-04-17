@@ -4,10 +4,9 @@ customElements.define(
         constructor() {
             super();
             this.btn = document.createElement("button");
-            this.btn.textContent = "hi there";
+            this.btn.textContent = "button text";
             this.append(this.btn);
             this.btn.addEventListener("click", this);
-            this.btn.addEventListener("mouseover", this);
         }
 
         handleEvent(event) {
@@ -15,18 +14,7 @@ customElements.define(
         }
 
         onclick(event) {
-            console.log("you clicked bitch!");
-        }
-
-        onmouseover(event) {
-            console.log("you hovered bitch!");
-        }
-
-        connectedCallback() {
-            console.log("wc-template CONNECTED");
-        }
-        disconnectedCallback() {
-            console.log("wc-template DISCONNECTED");
+            console.log("you clicked");
         }
     }
 );
