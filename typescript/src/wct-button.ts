@@ -1,10 +1,11 @@
-class WebcomponentButton extends HTMLButtonElement {
+class WebcomponentTemplateButton extends HTMLButtonElement {
   constructor() {
     super();
-    this.innerText = this.getAttribute("slot") ?? "";
     document.addEventListener("click", this);
   }
 
+  // this is like a router for events. but needs to things.
+  // addEventListener and the Function that deals with event like 'onClick'
   handleEvent(event: Event) {
     const handlerName =
       "on" + event.type.charAt(0).toUpperCase() + event.type.slice(1);
@@ -26,5 +27,7 @@ class WebcomponentButton extends HTMLButtonElement {
   }
 }
 
-customElements.define("wc-button", WebcomponentButton, { extends: "button" });
-export { WebcomponentButton };
+customElements.define("wct-button", WebcomponentTemplateButton, {
+  extends: "button",
+});
+export { WebcomponentTemplateButton };
