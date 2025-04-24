@@ -15,7 +15,7 @@ class WebcomponentTemplateButton extends HTMLButtonElement {
     }
   }
 
-  onClick(event: Event) {
+  onClick(event: MouseEvent) {
     console.log("you clicked bitch!", event);
   }
 
