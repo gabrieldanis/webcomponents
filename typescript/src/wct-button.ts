@@ -1,7 +1,6 @@
 class WebcomponentTemplateButton extends HTMLButtonElement {
   constructor() {
     super();
-    document.addEventListener("click", this);
   }
 
   // this is like a router for events. but needs to things.
@@ -20,6 +19,7 @@ class WebcomponentTemplateButton extends HTMLButtonElement {
   }
 
   connectedCallback() {
+    document.addEventListener("click", this);
     console.log("wc-button CONNECTED");
   }
   disconnectedCallback() {

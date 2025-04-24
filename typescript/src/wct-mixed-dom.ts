@@ -2,10 +2,6 @@ class WebcomponentTemplateMixedDom extends HTMLElement {
   constructor() {
     super();
 
-    const lightRoot = document.createElement("div");
-    lightRoot.innerText = "i am in the light DOM";
-    this.appendChild(lightRoot);
-
     // adding a shadow DOM, important, don't attachShadow to straight to THIS or any element which content you want to display in the light dom
     // becaues you then can't attach non shadow elements anymore.
     const shadowRootElement = document.createElement("div");
@@ -21,6 +17,10 @@ class WebcomponentTemplateMixedDom extends HTMLElement {
 
   connectedCallback() {
     console.log("wct-mixed-dom CONNECTED");
+
+    const lightRoot = document.createElement("div");
+    lightRoot.innerText = "i am in the light DOM";
+    this.appendChild(lightRoot);
   }
   disconnectedCallback() {
     console.log("wct-mixed-dom DISCONNECTED");
