@@ -1,4 +1,4 @@
-class WebcomponentTemplateButton extends HTMLButtonElement {
+class WebComponentTemplateButton extends HTMLButtonElement {
   constructor() {
     super();
   }
@@ -27,7 +27,7 @@ class WebcomponentTemplateButton extends HTMLButtonElement {
   }
 }
 
-customElements.define("wct-button", WebcomponentTemplateButton, {
+customElements.define("wct-button", WebComponentTemplateButton, {
   extends: "button",
 });
-export { WebcomponentTemplateButton };
+export { WebComponentTemplateButton };

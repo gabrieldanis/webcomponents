@@ -1,4 +1,4 @@
-class WebcomponentTemplateShadowDom extends HTMLElement {
+class WebComponentTemplateShadowDom extends HTMLElement {
   shadow: ShadowRoot | null = null;
 
   constructor() {
@@ -23,8 +23,8 @@ class WebcomponentTemplateShadowDom extends HTMLElement {
   }
 }
 
-customElements.define("wct-shadow-dom", WebcomponentTemplateShadowDom);
-export { WebcomponentTemplateShadowDom };
+customElements.define("wct-shadow-dom", WebComponentTemplateShadowDom);
+export { WebComponentTemplateShadowDom };
 
 // usage in HTML
 //     <wct-shadow-dom>

@@ -1,4 +1,4 @@
-class WebcomponentTemplateMixedDom extends HTMLElement {
+class WebComponentTemplateMixedDom extends HTMLElement {
   constructor() {
     super();
 
@@ -27,5 +27,5 @@ class WebcomponentTemplateMixedDom extends HTMLElement {
   }
 }
 
-customElements.define("wct-mixed-dom", WebcomponentTemplateMixedDom);
-export { WebcomponentTemplateMixedDom };
+customElements.define("wct-mixed-dom", WebComponentTemplateMixedDom);
+export { WebComponentTemplateMixedDom };

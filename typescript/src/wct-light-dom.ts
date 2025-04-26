@@ -1,4 +1,4 @@
-export class WebcomponentTemplateLightDom extends HTMLElement {
+export class WebComponentTemplateLightDom extends HTMLElement {
   // giving initial value to attribute coming from DOM
   size: number = 0;
   div = document.createElement("div");
@@ -33,4 +33,4 @@ export class WebcomponentTemplateLightDom extends HTMLElement {
   }
 }
 
-customElements.define("wct-light-dom", WebcomponentTemplateLightDom);
+customElements.define("wct-light-dom", WebComponentTemplateLightDom);
