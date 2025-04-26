@@ -1,11 +1,11 @@
 class WebcomponentTemplateShadowDom extends HTMLElement {
-  shadowRoot: ShadowRoot | null = null;
+  shadow: ShadowRoot | null = null;
 
   constructor() {
     super();
 
     // HAS TO HAPPEN IN CONSTRUCTOR!!!
-    this.shadowRoot = this.attachShadow({ mode: "closed" });
+    this.shadow = this.attachShadow({ mode: "closed" });
   }
   connectedCallback() {
     console.log("wct-shadow-dom CONNECTED");
@@ -14,8 +14,8 @@ class WebcomponentTemplateShadowDom extends HTMLElement {
     const slot = document.createElement("slot");
     slot.name = "position1";
     slot.innerText = "placeholder Text Slot";
-    if (this.shadowRoot) {
-      this.shadowRoot.appendChild(slot);
+    if (this.shadow) {
+      this.shadow.appendChild(slot);
     }
   }
   disconnectedCallback() {

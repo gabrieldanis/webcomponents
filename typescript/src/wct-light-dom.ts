@@ -1,4 +1,4 @@
-class WebcomponentTemplateLightDom extends HTMLElement {
+export class WebcomponentTemplateLightDom extends HTMLElement {
   // giving initial value to attribute coming from DOM
   size: number = 0;
   div = document.createElement("div");
@@ -10,6 +10,16 @@ class WebcomponentTemplateLightDom extends HTMLElement {
 
   connectedCallback() {
     console.log("wct-light-dom CONNECTED");
+
+    const container = document.getElementById("container");
+    console.log("container", container);
+
+    const test = document.createElement("div");
+
+    if (container) {
+      test.appendChild(container);
+    }
+    this.appendChild(test);
 
     // getting info from attributs aka. passing info into webcomponent through html
     const size = Number(this.getAttribute("size"));
@@ -24,4 +34,3 @@ class WebcomponentTemplateLightDom extends HTMLElement {
 }
 
 customElements.define("wct-light-dom", WebcomponentTemplateLightDom);
-export { WebcomponentTemplateLightDom };
